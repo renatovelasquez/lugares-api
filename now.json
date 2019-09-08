@@ -1,0 +1,24 @@
+{
+  "name": "reo-video",
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ],
+  "env": {
+    "DB_USER": "@reo-db-user",
+    "DB_PASSWORD": "@reo-db-password",
+    "DB_HOST": "@reo-db-host",
+    "DB_NAME": "@reo-db-name",
+    "CLIENT_ID": "@reo-fs-client-id",
+    "CLIENT_SECRET": "@reo-fs-client-secret"
+  }
+}
